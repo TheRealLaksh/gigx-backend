@@ -31,16 +31,16 @@ Key highlights:
 
 ## 📂 Project Structure
 gigx_platform_backend/
-├── gigs/               # Gig app (CRUD APIs)
-├── users/              # Custom User app (auth, JWT)
-├── gigx_platform/      # Project settings, URLs
-├── staticfiles/        # Static files (collected on deploy)
-├── venv/               # Virtual environment
-├── db.sqlite3          # Default local DB
-├── manage.py           # Django management script
-├── cli_test.py         # CLI test tool (requests-based)
-├── requirements.txt    # Python dependencies
-└── runtime.txt         # Deployment runtime
+├── gigs/               
+├── users/              
+├── gigx_platform/      
+├── staticfiles/         
+├── venv/               
+├── db.sqlite3          
+├── manage.py           
+├── cli_test.py         
+├── requirements.txt    
+└── runtime.txt         
 
 frontend/
 ├── css/
