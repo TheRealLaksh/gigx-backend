@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Auth | Login & Register</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="curved-shape"></div>
+    <div class="curved-shape2"></div>
+
+    <!-- Login Box -->
+    <div class="form-box Login" id="login-box">
+      <h2 class="animation">Login</h2>
+      <form id="login-form" class="form">
+        <div class="input-box">
+          <input type="email" id="login-email" required>
+          <label for="login-email">Email</label>
+          <box-icon type="solid" name="envelope" color="gray"></box-icon>
+        </div>
+
+        <div class="input-box">
+          <input type="password" id="login-password" required>
+          <label for="login-password">Password</label>
+          <box-icon name="lock-alt" type="solid" color="gray"></box-icon>
+        </div>
+
+        <div class="input-box">
+          <button class="btn" type="submit">Login</button>
+        </div>
+
+        <div class="regi-link">
+          <p>Don’t have an account? <br>
+            <a href="#" id="registerBtn">Sign Up</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Info Panel (Login Side) -->
+    <div class="info-content Login">
+      <h2>WELCOME BACK!</h2>
+      <p>We are happy to have you with us again. If you need anything, we are here to help.</p>
+    </div>
+
+    <!-- Register Box -->
+    <div class="form-box Register" id="register-box">
+      <h2>Register</h2>
+      <form id="register-form" class="form">
+        <div class="input-box">
+          <input type="text" id="register-name" required>
+          <label for="register-name">Full Name</label>
+          <box-icon type="solid" name="user" color="gray"></box-icon>
+        </div>
+
+        <div class="input-box">
+          <input type="text" id="register-username" required>
+          <label for="register-username">Username</label>
+          <box-icon type="solid" name="id-card" color="gray"></box-icon>
+        </div>
+
+        <div class="input-box">
+          <input type="email" id="register-email" required>
+          <label for="register-email">Email</label>
+          <box-icon name="envelope" type="solid" color="gray"></box-icon>
+        </div>
+
+        <div class="input-box">
+          <input type="password" id="register-password" required>
+          <label for="register-password">Password</label>
+          <box-icon name="lock-alt" type="solid" color="gray"></box-icon>
+        </div>
+
+        <div class="input-box">
+          <button class="btn" type="submit">Register</button>
+        </div>
+
+        <div class="regi-link">
+          <p>Already have an account? <br>
+            <a href="#" id="loginBtn">Sign In</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+   
+    <div class="info-content Register">
+      <h2>WELCOME!</h2>
+      <p>We’re delighted to have you here. If you need any assistance, feel free to reach out.</p>
+    </div>
+  </div>
+
+  
+  <script src="./js/app.js"></script>
+</body>
+</html>

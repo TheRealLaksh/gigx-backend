@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GigX | Gig Details</title>
+  <link rel="stylesheet" href="../css/gig_detail.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="gig-title">Gig Title</h1>
+    <p id="gig-description"></p>
+    <p><strong>Amount:</strong> <span id="gig-amount"></span></p>
+    <p><em>Posted by: <span id="gig-creator"></span></em></p>
+    <p><em>Date Posted: <span id="gig-date"></span></em></p>
+
+    <!-- Edit + Back buttons -->
+    <div class="actions">
+      <button onclick="goBack()" class="btn secondary">Back to Dashboard</button>
+      <button id="editBtn" class="btn">Edit Gig</button>
+    </div>
+
+    <!-- Hidden Edit Form -->
+    <form id="edit-gig-form" class="form hidden">
+      <h2>Edit Gig</h2>
+      <div class="input-group">
+        <input type="text" id="edit-title" required>
+        <label for="edit-title">Title</label>
+      </div>
+
+      <div class="input-group">
+        <textarea id="edit-description" required></textarea>
+        <label for="edit-description">Description</label>
+      </div>
+
+      <div class="input-group">
+        <input type="number" id="edit-amount" step="0.01" required>
+        <label for="edit-amount">Amount ($)</label>
+      </div>
+
+      <button type="submit" class="btn">Save Changes</button>
+    </form>
+  </div>
+
+  <script src="../js/gig_detail.js"></script>
+</body>
+</html>

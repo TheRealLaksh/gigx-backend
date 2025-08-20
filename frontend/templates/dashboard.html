@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GigX | Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+  <!-- Top Navbar -->
+  <header>
+    <div class="brand">GigX Dashboard</div>
+    <div class="pill">
+      <span id="user-name"></span> • <span id="user-role"></span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="wrap">
+    <!-- Search + Actions -->
+    <div class="row">
+      <input id="search" type="text" placeholder="Search gigs by title...">
+      <button id="searchBtn" class="btn">Search</button>
+      <a href="create-gig.html" class="btn" style="text-decoration:none;">+ Create Gig</a>
+      <button id="logoutBtn" class="btn" style="background:#f0446c;">Logout</button>
+    </div>
+
+    <!-- Welcome -->
+    <div class="welcome">
+      <h2>👋 Welcome!</h2>
+      <p><b>Email:</b> <span id="user-email"></span></p>
+      <p><b>Role:</b> <span id="user-role"></span></p>
+    </div>
+
+    <!-- Available Gigs -->
+    <h2>Available Gigs</h2>
+    <div id="gig-list" class="grid">
+      <p>Loading gigs...</p>
+    </div>
+  </div>
+
+  <!-- ============================= -->
+  <!-- Edit Modal -->
+  <!-- ============================= -->
+  <div id="editModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Edit Gig</h2>
+      <form id="edit-gig-form" class="form">
+        <div class="input-group">
+          <label for="edit-title">Title</label>
+          <input type="text" id="edit-title" required>
+        </div>
+
+        <div class="input-group">
+          <label for="edit-description">Description</label>
+          <textarea id="edit-description" required></textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="edit-amount">Amount ($)</label>
+          <input type="number" id="edit-amount" step="0.01" required>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn">Save Changes</button>
+          <button type="button" id="closeModal" class="btn secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

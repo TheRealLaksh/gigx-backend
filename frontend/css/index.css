@@ -1,0 +1,259 @@
+/* ========== GLOBAL RESET & BASE ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #25252b;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+/* ========== FORM BOXES ========== */
+.container .form-box {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 60px;
+  background: #25252b;
+}
+
+.form-box h2 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ========== INPUTS ========== */
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin-top: 30px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  border-bottom: 2px solid #fff;
+  padding-right: 30px;
+  transition: .4s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border-bottom: 2px solid #e46033;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  pointer-events: none;
+  transition: .3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -10px;
+  color: #e46033;
+  font-size: 14px;
+}
+
+.input-box box-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 20px;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.input-box input:focus ~ box-icon,
+.input-box input:valid ~ box-icon {
+  color: #e46033;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  margin-top: 30px;
+  width: 100%;
+  height: 55px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #000000;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  background: linear-gradient(#000000, #b19292, #000000, #c9a9a9);
+  z-index: -1;
+  transition: .5s;
+}
+
+.btn:hover::before {
+  top: 0;
+}
+
+/* ========== LINKS ========== */
+.regi-link {
+  font-size: 16px;
+  text-align: center;
+  margin: 25px 0 15px;
+}
+
+.regi-link a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.regi-link a:hover {
+  text-decoration: underline;
+}
+
+/* ========== INFO PANELS ========== */
+.info-content {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 60px;
+}
+
+.info-content h2 {
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.info-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.info-content.Login {
+  right: 0;
+  text-align: right;
+}
+
+.info-content.Register {
+  left: 0;
+  text-align: left;
+}
+
+/* ========== BACKGROUND SHAPES ========== */
+.curved-shape {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#FFFDF2, #FFFDF2, #4b4a4a, #000000);
+  transform: rotate(10deg) skewY(40deg);
+  transform-origin: bottom right;
+}
+
+.curved-shape2 {
+  position: absolute;
+  left: 250px;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  background: #f3e5e5;
+  border-top: 3px solid #ffffff;
+}
+
+/* ========== ANIMATIONS ========== */
+/* Login form visible by default */
+.form-box.Login {
+  left: 0;
+  transition: 0.7s ease;
+}
+
+.container.active .form-box.Login {
+  transform: translateX(-120%);
+  opacity: 0;
+}
+
+/* Register form hidden by default */
+.form-box.Register {
+  right: 0;
+  transition: 0.7s ease;
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+.container.active .form-box.Register {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Info content (right side) */
+.info-content.Login {
+  transition: 0.7s ease;
+}
+
+.container.active .info-content.Login {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+/* Info content (left side) */
+.info-content.Register {
+  transition: 0.7s ease;
+  transform: translateX(-120%);
+  opacity: 0;
+}
+
+.container.active .info-content.Register {
+  transform: translateX(0);
+  opacity: 1;
+}

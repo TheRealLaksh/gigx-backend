@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GigX | Create Gig</title>
+  <!-- Correct linking -->
+  <link rel="stylesheet" href="../css/create-gig.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create a New Gig</h1>
+
+    <!-- Create Gig Form -->
+    <form id="create-gig-form" class="form">
+      <div class="input-group">
+        <input type="text" id="gig-title" required>
+        <label for="gig-title">Title</label>
+      </div>
+
+      <div class="input-group">
+        <textarea id="gig-description" rows="5" required></textarea>
+        <label for="gig-description">Description</label>
+      </div>
+
+      <div class="input-group">
+        <input type="number" id="gig-amount" step="0.01" required>
+        <label for="gig-amount">Amount ($)</label>
+      </div>
+
+      <button type="submit" class="btn primary">Post Gig</button>
+    </form>
+
+    <button onclick="goBack()" class="btn secondary">⬅ Back to Dashboard</button>
+  </div>
+
+  <!-- Correct linking -->
+  <script src="../js/create-gig.js"></script>
+</body>
+</html>
