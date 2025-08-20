@@ -46,35 +46,20 @@ gigx_platform_backend/
 frontend/
 
 ├── css/
-
 │   ├── create-gig.css
-
 │   ├── dashboard.css
-
 │   ├── gig_detail.css
-
 │   └── index.css
-
 ├── js/
-
 │   ├── app.js
-
 │   ├── create-gig.js
-
 │   ├── dashboard.js
-
 │   └── gig_detail.js
-
 ├── templates/
-
 │   ├── create-gig.html
-
 │   ├── dashboard.html
-
 │   └── gig_detail.html
-
 └── index.html
-
 
 ---
 
