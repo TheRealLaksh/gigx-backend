@@ -31,6 +31,7 @@ Key highlights:
 
 ## 📂 Project Structure
 gigx_platform_backend/
+
 ├── gigs/               
 ├── users/              
 ├── gigx_platform/      
@@ -43,21 +44,37 @@ gigx_platform_backend/
 └── runtime.txt         
 
 frontend/
+
 ├── css/
+
 │   ├── create-gig.css
+
 │   ├── dashboard.css
+
 │   ├── gig_detail.css
+
 │   └── index.css
+
 ├── js/
+
 │   ├── app.js
+
 │   ├── create-gig.js
+
 │   ├── dashboard.js
+
 │   └── gig_detail.js
+
 ├── templates/
+
 │   ├── create-gig.html
+
 │   ├── dashboard.html
+
 │   └── gig_detail.html
+
 └── index.html
+
 
 ---
 
